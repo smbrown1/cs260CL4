@@ -38,12 +38,16 @@ router.get('/getScore', function(req, res) {
 });
 
 var colors = [];
-router.post('/addColor', function(req, res){
-	colors.push( '{ "userame":"'+req.query.u+'", "color":"'+req.query.c+'"}');
-	res.end('{"success" : "Updated Successfully", "status" : 200}');
+router.get('/addColor', function(req, res){
+	console.log(req.query.u);
+	console.log(req.query.c);
+	console.log(req.query);
+	colors.push( '{ "username":"'+req.query.u+'", "color":"'+req.query.c+'"}');
+	//res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 
 router.get('/getColors', function(req, res){
+	console.log("in getColors");
 	res.send(colors);
 });
 

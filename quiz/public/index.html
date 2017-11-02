@@ -45,15 +45,21 @@ Question: <span id = "triviaQuestions">Empty</span>
 <script>
 	$("#submitButton").click(function(e) {
 		e.preventDefault();
-		var addUser = "/addColor?u=" + $("#nameField").val() + "?c=" + $("#colorField").val();
-		$.getJSON(addUser, function(data) {
+		var colorString = $("#colorField").val().substring(1);
+		var addColor = "/addColor?u=" + $("#nameField").val() + "&c=" + colorString; 
+//"cc3399";//$("#colorField").val();
+		console.log($("#colorField").val());
+		$.getJSON(addColor, function(data) {
 			
 		});
 		var getColors = "/getColors";
 		$.getJSON(getColors, function(data) {
+			console.log(data);
 			var everything; 
 			everything = "<ul>";
 			$.each(data, function(i, item) {
+				console.log(data[i]);
+				console.log(data[i].username);
 				everything += "<li> " + data[i].username + " " + data[i].color + "</li>";
 			});
 		everything += "</ul>";
