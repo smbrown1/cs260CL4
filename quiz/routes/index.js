@@ -42,7 +42,7 @@ router.get('/addColor', function(req, res){
 	console.log(req.query.u);
 	console.log(req.query.c);
 	console.log(req.query);
-	colors.push( '{ "username":"'+req.query.u+'", "color":"'+req.query.c+'"}');
+	colors.push( { "username":req.query.u, "color":req.query.c});
 	//res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 

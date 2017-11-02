@@ -1,6 +1,7 @@
 <html>
 
 <head>
+ <
  <script
          src="http://code.jquery.com/jquery-3.2.1.min.js"
          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -59,7 +60,7 @@ Question: <span id = "triviaQuestions">Empty</span>
 			everything = "<ul>";
 			$.each(data, function(i, item) {
 				console.log(data[i]);
-				console.log(data[i].username);
+				console.log(data[i][0]);
 				everything += "<li> " + data[i].username + " " + data[i].color + "</li>";
 			});
 		everything += "</ul>";
