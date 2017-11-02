@@ -1,0 +1,39 @@
+<html>
+
+<head>
+ <script
+         src="http://code.jquery.com/jquery-3.2.1.min.js"
+         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+         crossorigin="anonymous"></script>
+<script src >
+
+$document.ready(function(){
+
+$("triviaQuestions").keyup(function(){
+  var url = "/getQuestions"
+  $.getJSON(url, function(data){
+    console.log(data)
+     $.each(data, function(i, item){
+        $("#triviaQuestions").html(data.results[i].question)
+	function answerCheck(value){
+	  if (value = data.results[i].correct_answer)
+	}
+     });
+});
+
+
+};
+
+</script>
+</head>
+<body>
+<h1> Welcome to Trivia! </h1>
+
+Question: <span id = "triviaQuestions">Empty</span>
+<button id = "True" onClick = "answerCheck(this.id)" > True </button>
+<button id = "False" onClick = "answerCheck(this.id)"> False </button>
+
+</body>
+
+
+</html>
