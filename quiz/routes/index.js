@@ -39,7 +39,7 @@ router.get('/getScore', function(req, res) {
 
 var colors = [];
 router.post('/addColor', function(req, res){
-	colors.push( '{ "userame":"'+req.query.u+'", "color":"'+req.query.c+'"}';
+	colors.push( '{ "userame":"'+req.query.u+'", "color":"'+req.query.c+'"}');
 	res.end('{"success" : "Updated Successfully", "status" : 200}');
 });
 
