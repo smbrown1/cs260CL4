@@ -27,11 +27,40 @@ $("triviaQuestions").keyup(function(){
 </script>
 </head>
 <body>
-<h1> Welcome to Trivia! </h1>
+<!--<h1> Welcome to Trivia! </h1>
 
 Question: <span id = "triviaQuestions">Empty</span>
 <button id = "True" onClick = "answerCheck(this.id)" > True </button>
 <button id = "False" onClick = "answerCheck(this.id)"> False </button>
+-->
+
+<h1>See your friend's favorite colors!</h1>
+<form>
+	Enter your name: <input type="text" id="nameField" value=""><br>
+	Enter your favorite color: <input type="color" id="colorField" value="#cc3399">
+	<input class="button button1" id="submitButton" type="submit" value="That's my color!"><br>
+	Everyone's Favorite Color: <span id="everyone">Nothing</span>
+</form>
+
+<script>
+	$("#submitButton").click(function(e) {
+		e.preventDefault();
+		var addUser = "/addColor?u=" + $("#nameField").val() + "?c=" + $("#colorField").val();
+		$.getJSON(addUser, function(data) {
+			
+		});
+		var getColors = "/getColors";
+		$.getJSON(getColors, function(data) {
+			var everything; 
+			everything = "<ul>";
+			$.each(data, function(i, item) {
+				everything += "<li> " + data[i].username + " " + data[i].color + "</li>";
+			});
+		everything += "</ul>";
+		$("#everyone").html(everything);
+		});
+	});
+</script>
 
 </body>
 
