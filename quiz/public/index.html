@@ -62,7 +62,7 @@ Question: <span id = "triviaQuestions">Empty</span>
 			$.each(data, function(i, item) {
 				console.log(data[i]);
 				console.log(data[i][0]);
-				everything += "<li> " + data[i].username + "<div style=\"background-color: #" + data[i].color + "\">" + data[i].color + "</div></li>";	//data[i].color + "</li>";
+				everything += "<li><div style=\"background-color: #" + data[i].color + "\">" + data[i].username + "'s favorite color!</div></li>";	//data[i].color + "</li>";
 			});
 		everything += "</ul>";
 		$("#everyone").html(everything);
