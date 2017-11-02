@@ -19,12 +19,12 @@ router.get('/getUser', function(req, res){
 	{
 		if(users[i][0] == req.query.q)
 		{
-			ret.status(200).json({username:users[i][0]});
+			ret.status(200).json(username:users[i][0]);
 			return;
 		}
 	}
-	users.push([req.query.q, 0]);
-	ret.status(200).json({username:users[i][0]});
+	users.push(req.query.q);
+	ret.status(200).json({username:user[i][0]});
 });
 
 router.get('/getScore', function(req, res) {
@@ -36,5 +36,17 @@ router.get('/getScore', function(req, res) {
 		}
 	}
 }
+
+var colors = [];
+router.post('/addColor', function(req, res){
+	colors.push( '{ "userame":"'+req.query.u+'", "color":"'+req.query.c+'"}';
+	res.end('{"success" : "Updated Successfully", "status" : 200}');
+});
+
+router.get('/getColors', function(req, res){
+	res.send(colors);
+});
+
+
 
 module.exports = router;
