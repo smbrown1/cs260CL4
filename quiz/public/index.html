@@ -39,7 +39,7 @@ Question: <span id = "triviaQuestions">Empty</span>
 <h1>See your friend's favorite colors!</h1>
 <form>
 	Enter your name: <input type="text" id="nameField" value=""><br>
-	Enter your favorite color: <input type="color" id="colorField" value="#cc3399">
+	Enter your favorite color: <input type="color" id="colorField" value="#cc3399"><br>
 	<input class="button button1" id="submitButton" type="submit" value="That's my color!"><br>
 	Everyone's Favorite Color: <span id="everyone">Nothing</span>
 </form>
@@ -49,8 +49,8 @@ Question: <span id = "triviaQuestions">Empty</span>
 		e.preventDefault();
 		var colorString = $("#colorField").val().substring(1);
 		var addColor = "/addColor?u=" + $("#nameField").val() + "&c=" + colorString; 
-//"cc3399";//$("#colorField").val();
-		console.log($("#colorField").val());
+		
+		//console.log($("#colorField").val());
 		$.getJSON(addColor, function(data) {
 			
 		});
@@ -62,7 +62,7 @@ Question: <span id = "triviaQuestions">Empty</span>
 			$.each(data, function(i, item) {
 				console.log(data[i]);
 				console.log(data[i][0]);
-				everything += "<li> " + data[i].username + " " + data[i].color + "</li>";
+				everything += "<li> " + data[i].username + "<div style=\"background-color: #" + data[i].color + "\">" + data[i].color + "</div></li>";	//data[i].color + "</li>";
 			});
 		everything += "</ul>";
 		$("#everyone").html(everything);
