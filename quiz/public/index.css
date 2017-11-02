@@ -28,3 +28,7 @@ body
     color: #ffffcc ;
 }
 
+ul
+{
+  list-style-type: none;
+}
