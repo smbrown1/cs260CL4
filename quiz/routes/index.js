@@ -27,4 +27,14 @@ router.get('/getUser', function(req, res){
 	ret.status(200).json({username:users[i][0]});
 });
 
+router.get('/getScore', function(req, res) {
+	for(var i = 0; i < users.length; i++) {
+		if(users[i][0] == req.query.q) {
+			users[i][1] = req.query.score;
+			ret.status(200).json({username:users[i][0], score:users[i][1]});
+			return;
+		}
+	}
+}
+
 module.exports = router;
