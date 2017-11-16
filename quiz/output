@@ -1,0 +1,7 @@
+nohup: ignoring input
+[0mGET / [32m200 [0m8.583 ms - 2114[0m
+[0mGET /index.css [32m200 [0m1.922 ms - 542[0m
+[0mGET /favicon.ico [33m404 [0m331.261 ms - 1225[0m
+[0mGET / [36m304 [0m1.211 ms - -[0m
+[0mGET /index.css [36m304 [0m0.548 ms - -[0m
+[0mGET / [32m200 [0m1.469 ms - 2114[0m
