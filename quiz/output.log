@@ -1,0 +1,11 @@
+nohup: ignoring input
+[0mGET / [36m304 [0m6.879 ms - -[0m
+[0mGET /index.css [36m304 [0m1.533 ms - -[0m
+[0mGET / [36m304 [0m0.869 ms - -[0m
+[0mGET /index.css [36m304 [0m1.131 ms - -[0m
+[0mGET / [36m304 [0m0.327 ms - -[0m
+[0mGET /index.css [36m304 [0m0.319 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m345.699 ms - 1085[0m
+[0mGET / [32m200 [0m3.267 ms - 2114[0m
+[0mGET /index.css [32m200 [0m1.383 ms - 542[0m
+[0mGET /favicon.ico [33m404 [0m41.494 ms - 1085[0m
